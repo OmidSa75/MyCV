@@ -33,7 +33,7 @@
 
 \newcommand{\smallcaps}[1]{\textsc{\lowercase{#1}}}
 
-\RequirePackage[a4paper,nohead,nofoot,hmargin=2.25cm,vmargin=2cm,margin=2.5cm]{geometry}
+\RequirePackage[a4paper,nohead,nofoot,hmargin=1.25cm,vmargin=1cm,margin=1.5cm]{geometry}
 \RequirePackage{relsize}
 \RequirePackage[dvipsnames,svgnames]{xcolor}
 \RequirePackage{tikz}
@@ -104,11 +104,21 @@
 \newcommand{\prefixmarker}[1]{\def\@prefixmarker{#1}}
 \def\@prefixmarker{\relscale{.5}\faCircle}
 
+% The prefixmarker is for showing the marker before the titles in the rubric sections
+% And I remove it in the uncommented part!
+% \prefix{%
+%   \hspace*{-1ex}
+%   \color{MarkerColour!80!black}\@prefixmarker%
+%   \hspace*{1ex}%
+% }
+
 \prefix{%
   \hspace*{-1ex}
-  \color{MarkerColour!80!black}\@prefixmarker%
+  \color{MarkerColour!80!black}%
   \hspace*{1ex}%
 }
+% --------------------------------------------------------------
+
 
 \newcommand{\makerubrichead}[1]{\vskip\baselineskip\@@rubrichead{#1}}
 
@@ -166,3 +176,4 @@
     \textbullet \hspace{1em} &  #1 
   \end{tabular}
 }
+

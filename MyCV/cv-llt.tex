@@ -42,11 +42,14 @@
   \usepackage[p,osf,swashQ]{cochineal}
   \usepackage[medium,bold]{cabin}
   \usepackage[varqu,varl,scale=0.9]{zi4}
+
 \else % If you're using pdfLaTeX or latex
-  \usepackage[T1]{fontenc}
-  \usepackage[p,osf,swashQ]{cochineal}
-  \usepackage{cabin}
-  \usepackage[varqu,varl,scale=0.9]{zi4}
+  % \usepackage[T1]{fontenc}
+  % \usepackage[p,osf,swashQ]{cochineal}
+  % \usepackage{cabin}
+  % \usepackage[varqu,varl,scale=0.9]{zi4}
+  \usepackage{cmbright}
+    \usepackage[OT1]{fontenc}   
 \fi
 
 % Change the page margins if you want
@@ -95,7 +98,7 @@
 
 \begin{document}
 \makeheaders[c]
-
+\sffamily
 % \makerubric{employment}
 \input{profile}
 \input{research_interests}
@@ -109,8 +112,8 @@
 \makerubric{skills}
 \input{research_ex}
 % \makerubric{misc}
-\makerubric{projects}
-\input{interests}
+% \makerubric{projects}
+% \input{interests}
 % \makerubric{referee}
 
 % \input{referee-full}
